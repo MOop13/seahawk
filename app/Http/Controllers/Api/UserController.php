@@ -62,7 +62,7 @@ class UserController extends Controller
         $cardType = Env::getEnv('cardType');
         if (empty($cardType)) {
             Log::info('当前游戏未开通房卡后台');
-           return $this->fail(29, '当前游戏未开通后台');
+           return $this->fail(29, '当前游戏未开通后台1');
         }
         try {
             if (User::query()->where('card_type', '=', $cardType)->where('phone', '=', $phone)->count() > 0){
